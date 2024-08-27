@@ -38,6 +38,17 @@ const Login = () => {
         >
           Iniciar Sesion
         </Button>
+        <Typography variant="body2" color="text.secondary">
+          ¿Olvidaste tu contraseña?
+        </Typography>
+        <Button
+          variant="contained"
+          style={{
+            marginTop: "2rem",
+          }}
+        >
+          Recuperala
+        </Button>
       </Stack>
     </Container>
   );
