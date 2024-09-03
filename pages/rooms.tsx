@@ -1,3 +1,4 @@
+import { AccountCircle } from "@mui/icons-material";
 import {
   Box,
   Card,
@@ -6,6 +7,7 @@ import {
   CardContent,
   CardMedia,
   Container,
+  InputAdornment,
   Stack,
   TextField,
   Typography,
@@ -14,29 +16,72 @@ import React from "react";
 
 const rooms = () => {
   return (
-    <Box
-      sx={{
-        backgroundColor: "#2e47ad",
-        paddingTop: "32px",
-        paddingBottom: "32px",
-      }}
-    >
-      <Container maxWidth={"sm"}>
-        <Typography>Home</Typography>
-        <Stack>
-          <TextField></TextField>
-          <TextField></TextField>
-          <TextField></TextField>
-        </Stack>
-      </Container>
-
-      <Stack>
+    <Stack spacing={"32px"}>
+      <Box
+        sx={{
+          backgroundColor: "#2e47ad",
+          paddingTop: "32px",
+          paddingBottom: "32px",
+        }}
+      >
+        <Container maxWidth={"sm"}>
+          <Typography>Home</Typography>
+          <Stack spacing={"16px"}>
+            <Box sx={{ borderRadius: "16px", backgroundColor: "white" }}>
+              <TextField
+                variant="standard"
+                id="input-with-icon-textfield"
+                label="TextField"
+                fullWidth
+                slotProps={{
+                  input: {
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <AccountCircle />
+                      </InputAdornment>
+                    ),
+                  },
+                }}
+              />
+            </Box>
+            <Box sx={{ borderRadius: "16px", backgroundColor: "white" }}>
+              <TextField
+                fullWidth
+                slotProps={{
+                  input: {
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <AccountCircle />
+                      </InputAdornment>
+                    ),
+                  },
+                }}
+              />
+            </Box>
+            <Box sx={{ borderRadius: "16px", backgroundColor: "white" }}>
+              <TextField
+                fullWidth
+                slotProps={{
+                  input: {
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <AccountCircle />
+                      </InputAdornment>
+                    ),
+                  },
+                }}
+              />
+            </Box>
+          </Stack>
+        </Container>
+      </Box>
+      <Stack direction={"row"} justifyContent={"center"} spacing={"32px"}>
         <Card sx={{ maxWidth: 345 }}>
           <CardActionArea>
             <CardMedia
               component="img"
               height="140"
-              image="/static/images/cards/contemplative-reptile.jpg"
+              image="https://picsum.photos/seed/picsum/200/300"
               alt="green iguana"
             />
             <CardContent>
@@ -55,7 +100,7 @@ const rooms = () => {
             <CardMedia
               component="img"
               height="140"
-              image="/static/images/cards/contemplative-reptile.jpg"
+              image="https://picsum.photos/seed/picsum/200/300"
               alt="green iguana"
             />
             <CardContent>
@@ -70,7 +115,7 @@ const rooms = () => {
           </CardActionArea>
         </Card>
       </Stack>
-    </Box>
+    </Stack>
   );
 };
 
